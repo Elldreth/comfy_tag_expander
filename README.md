@@ -1,6 +1,6 @@
 ﻿# Danbooru Tag Expander - ComfyUI Custom Node
 
-Automatically expands Danbooru-style tags with their implied tags based on official Danbooru tag implication data.
+Automatically expands tags with their implied tags based on official Danbooru tag implication data. Works with both Danbooru-style underscored tags (`cat_ears`) and natural space-separated tags (`cat ears`).
 
 ## What It Does
 
@@ -110,10 +110,10 @@ The node automatically detects and preserves your tag format:
 
 ## Limitations
 
-- Only works with **Danbooru-style tags** (underscored, lowercase)
-- Generic tags won't suggest series-specific tags (e.g., `beach` won't suggest `beach_(naruto)`)
-- Model doesn't understand natural language, only tag names
-- Requires ~1.5GB VRAM when loaded
+- **Format flexible but tag-specific** - Works with both `cat_ears` and `cat ears`, but must be actual Danbooru tag names (not natural language descriptions)
+- **Generic tags stay generic** - Won't suggest series-specific tags (e.g., `beach` won't suggest `beach_(naruto)`)
+- **Only known tags expand** - Model only adds implications for tags in the Danbooru database (32k+ tags)
+- **Requires ~1.5GB VRAM** when loaded on GPU
 
 ## Troubleshooting
 
