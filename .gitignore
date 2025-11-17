@@ -1,0 +1,16 @@
+﻿# Basic Python gitignore for the node
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.log
+.venv/
+venv/
+*.cache
+.pytest_cache/
+.DS_Store
+Thumbs.db
